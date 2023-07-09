@@ -1,25 +1,24 @@
-const Home = () => {
-  const handleClick = () => {
-    console.log('hello ninjas');
-  };
+import { useState } from 'react';
 
-  const handleclick_two = (name) => {
-    console.log('hello_2' + name);
+const Home = () => {
+  //using the state hook
+  const [name, setName] = useState('kavinda before update');
+  const [age, setAge] = useState(30);
+
+  const handleClick = () => {
+    setName('kavi updted');
+    setAge(25);
   };
 
   return (
     <div className="home">
       <h2>Home page</h2>
 
-      <button onClick={handleClick}> click me </button>
+      <p>
+        {name} with age {age}
+      </p>
 
-      <button
-        onClick={() => {
-          handleclick_two('kavinda');
-        }}
-      >
-        click me 2
-      </button>
+      <button onClick={handleClick}> click me </button>
     </div>
   );
 };
