@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+
 // adding a style to divs in that component
 const styles = {
   container: {
@@ -12,10 +14,10 @@ const Navbar = () => {
     <div className="navbar">
       <h1>The dojo blog</h1>
       <div className="links">
-        <a href="/">Home</a>
-        <a href="/create" style={styles.container}>
+        <Link to="/">Home</Link>
+        <Link to="/create" style={styles.container}>
           New Blog
-        </a>
+        </Link>
       </div>
     </div>
   );
